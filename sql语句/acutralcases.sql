@@ -1,0 +1,32 @@
+declare 
+  cursor cemp is select empno,sal from emp order by sal;
+  pempno emp.empno%type;
+  psal emp.sal%type;
+  countnum number;
+  countemp number;
+  
+begin
+  select sum(sal) into countnum from emp;
+  open cemp;
+  loop
+       exit when countnum>50000;
+       fetch cemp into pempno,psal ;
+       exit when cemp%notfound;
+       update emp set sal = sal*1.1 where empno = pempno;
+       countemp := countemp+1;
+       countnum := countnum+psal*0.1;
+  end loop;
+  close cemp;
+  commit;
+  dbms_output.put_line('ÈËÊý:'||countemp||'   ×Ü¶î:'||countnum);
+end;
+/
+create or replace procedure empall(aid in number) as
+totalsal emp.sal%type;
+begin
+       DBMS_OUTPUT.PUT_LINE('HELLO,WORLD');
+       select sal into totalsal from emp where empno = aid;
+       DBMS_OUTPUT.PUT_LINE(totalsal);
+end;
+/
+select * from emp where empno = 7369;

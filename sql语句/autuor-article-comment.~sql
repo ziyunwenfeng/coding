@@ -1,0 +1,73 @@
+CREATE TABLE author(
+       author_id number(10) primary key,
+       username varchar2(255) not null unique,
+       nickname varchar2(255),
+       birthday date,
+       register_time date  not null 
+);
+create table article(
+       article_id number(10) primary key,
+       title varchar2(255) not null,
+       text varchar2(255) not null,
+       author number(10)not null,
+       foreign key (author) references author (author_id) 
+);
+create table comments(
+       comments_id number(10) primary key,
+       author number(10)not null,
+       article number(10)not null,
+       comments varchar2(255) not null,
+       foreign key (author) references author (author_id),
+       foreign key (article) references article (article_id) 
+);
+insert into author(author_id,
+                   username,
+                   nickname,
+                   birthday,
+                   register_time) values(
+                                 1,'aaa','a',sysdate,sysdate
+                   );
+
+select * from author;
+insert into author(author_id,
+                   username,
+                   nickname,
+                   birthday,
+                   register_time) values(
+                                 3,'ccc','a',sysdate,sysdate
+                   );
+insert into article(article_id,title,text,author) values(
+       1,'shanghai','shanghai',1
+       );
+select * from article;
+insert into article(article_id,title,text,author) values(
+       2,'beijing','beijing',1
+       );
+insert into article(article_id,title,text,author) values(
+       3,'shenzhen','shenzhen',2
+       );
+insert into article(article_id,title,text,author) values(
+       4,'guangzhou','guangzhou',3
+       );
+insert into article(article_id,title,text,author) values(
+       5,'zhengzhou','zhengzhou',3
+       );
+insert into comments(comments_id,
+                     author,
+                     article,
+                     comments) values(
+                               1,1,1,'good'
+                     );
+select * from comments;
+insert into comments(comments_id,
+                     author,
+                     article,
+                     comments) values(
+                               2,1,1,'ok'
+                     );
+insert into comments(comments_id,
+                     author,
+                     article,
+                     comments) values(
+                               5,3,1,'not ok'
+                     );

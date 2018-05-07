@@ -1,0 +1,2 @@
+select * from ARTICLE t
+create index articleindex on article(article_id); 
