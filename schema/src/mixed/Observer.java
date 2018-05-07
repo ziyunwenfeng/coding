@@ -1,0 +1,4 @@
+package mixed;
+public interface Observer {
+	public void update(QuackObservable duck);	
+}

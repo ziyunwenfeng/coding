@@ -1,0 +1,397 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (malloc) failed to allocate 32756 bytes for ChunkPool::allocate
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   In 32 bit mode, the process size limit was hit
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Use 64 bit Java on a 64 bit OS
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (allocation.cpp:273), pid=9556, tid=0x00000534
+#
+# JRE version: Java(TM) SE Runtime Environment (8.0_121-b13) (build 1.8.0_121-b13)
+# Java VM: Java HotSpot(TM) Client VM (25.121-b13 mixed mode, sharing windows-x86 )
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0058c400):  JavaThread "main" [_thread_in_vm, id=1332, stack(0x00a40000,0x00a90000)]
+
+Stack: [0x00a40000,0x00a90000],  sp=0x00a8e21c,  free space=312k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x1aa3bb]
+V  [jvm.dll+0x1a2bf8]
+V  [jvm.dll+0x8cb81]
+V  [jvm.dll+0x8cd5d]
+V  [jvm.dll+0x8d1f7]
+V  [jvm.dll+0xa4bf4]
+V  [jvm.dll+0x1a6240]
+C  [management.dll+0x1358]
+j  sun.management.DiagnosticCommandImpl.commandDescriptor(Lsun/management/DiagnosticCommandImpl$Wrapper;)Ljavax/management/Descriptor;+144
+j  sun.management.DiagnosticCommandImpl.getMBeanInfo()Ljavax/management/MBeanInfo;+182
+j  com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.getNewMBeanClassName(Ljava/lang/Object;)Ljava/lang/String;+13
+j  com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerMBean(Ljava/lang/Object;Ljavax/management/ObjectName;)Ljavax/management/ObjectInstance;+10
+j  com.sun.jmx.mbeanserver.JmxMBeanServer.registerMBean(Ljava/lang/Object;Ljavax/management/ObjectName;)Ljavax/management/ObjectInstance;+10
+j  java.lang.management.ManagementFactory$3.run()Ljava/lang/Void;+12
+j  java.lang.management.ManagementFactory$3.run()Ljava/lang/Object;+1
+v  ~StubRoutines::call_stub
+V  [jvm.dll+0x15aa85]
+V  [jvm.dll+0x220d7e]
+V  [jvm.dll+0x15ab1e]
+V  [jvm.dll+0x10b16f]
+C  [java.dll+0x1047]
+j  java.lang.management.ManagementFactory.addDynamicMBean(Ljavax/management/MBeanServer;Ljavax/management/DynamicMBean;Ljavax/management/ObjectName;)V+10
+j  java.lang.management.ManagementFactory.getPlatformMBeanServer()Ljavax/management/MBeanServer;+186
+j  org.apache.tomcat.util.modeler.Registry.getMBeanServer()Ljavax/management/MBeanServer;+82
+j  org.apache.catalina.util.LifecycleMBeanBase.initInternal()V+13
+j  org.apache.catalina.core.StandardServer.initInternal()V+1
+j  org.apache.catalina.util.LifecycleBase.init()V+29
+j  org.apache.catalina.util.LifecycleBase.start()V+142
+j  org.apache.catalina.startup.Tomcat.start()V+14
+j  org.apache.tomcat.maven.plugin.tomcat7.run.AbstractRunMojo.startContainer()V+1023
+j  org.apache.tomcat.maven.plugin.tomcat7.run.AbstractRunMojo.execute()V+118
+j  org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(Lorg/apache/maven/execution/MavenSession;Lorg/apache/maven/plugin/MojoExecution;)V+155
+j  org.apache.maven.lifecycle.internal.MojoExecutor.execute(Lorg/apache/maven/execution/MavenSession;Lorg/apache/maven/plugin/MojoExecution;Lorg/apache/maven/lifecycle/internal/ProjectIndex;Lorg/apache/maven/lifecycle/internal/DependencyContext;)V+220
+j  org.apache.maven.lifecycle.internal.MojoExecutor.execute(Lorg/apache/maven/execution/MavenSession;Lorg/apache/maven/plugin/MojoExecution;Lorg/apache/maven/lifecycle/internal/ProjectIndex;Lorg/apache/maven/lifecycle/internal/DependencyContext;Lorg/apache/maven/lifecycle/internal/PhaseRecorder;)V+6
+j  org.apache.maven.lifecycle.internal.MojoExecutor.execute(Lorg/apache/maven/execution/MavenSession;Ljava/util/List;Lorg/apache/maven/lifecycle/internal/ProjectIndex;)V+60
+j  org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(Lorg/apache/maven/execution/MavenSession;Lorg/apache/maven/execution/MavenSession;Lorg/apache/maven/lifecycle/internal/ReactorContext;Lorg/apache/maven/project/MavenProject;Lorg/apache/maven/lifecycle/internal/TaskSegment;)V+180
+j  org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(Lorg/apache/maven/execution/MavenSession;Lorg/apache/maven/lifecycle/internal/ReactorContext;Lorg/apache/maven/project/MavenProject;Lorg/apache/maven/lifecycle/internal/TaskSegment;)V+7
+j  org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build(Lorg/apache/maven/execution/MavenSession;Lorg/apache/maven/lifecycle/internal/ReactorContext;Lorg/apache/maven/lifecycle/internal/ProjectBuildList;Ljava/util/List;Lorg/apache/maven/lifecycle/internal/ReactorBuildStatus;)V+77
+j  org.apache.maven.lifecycle.internal.LifecycleStarter.execute(Lorg/apache/maven/execution/MavenSession;)V+353
+j  org.apache.maven.DefaultMaven.doExecute(Lorg/apache/maven/execution/MavenExecutionRequest;Lorg/apache/maven/execution/MavenSession;Lorg/apache/maven/execution/MavenExecutionResult;Lorg/eclipse/aether/DefaultRepositorySystemSession;)Lorg/apache/maven/execution/MavenExecutionResult;+422
+j  org.apache.maven.DefaultMaven.doExecute(Lorg/apache/maven/execution/MavenExecutionRequest;)Lorg/apache/maven/execution/MavenExecutionResult;+99
+j  org.apache.maven.DefaultMaven.execute(Lorg/apache/maven/execution/MavenExecutionRequest;)Lorg/apache/maven/execution/MavenExecutionResult;+2
+j  org.apache.maven.cli.MavenCli.execute(Lorg/apache/maven/cli/CliRequest;)I+27
+j  org.apache.maven.cli.MavenCli.doMain(Lorg/apache/maven/cli/CliRequest;)I+66
+j  org.apache.maven.cli.MavenCli.main([Ljava/lang/String;Lorg/codehaus/plexus/classworlds/ClassWorld;)I+24
+v  ~StubRoutines::call_stub
+V  [jvm.dll+0x15aa85]
+V  [jvm.dll+0x220d7e]
+V  [jvm.dll+0x15ab1e]
+V  [jvm.dll+0x1672c8]
+V  [jvm.dll+0x167533]
+V  [jvm.dll+0x103f33]
+C  [java.dll+0x3b26]
+j  sun.reflect.NativeMethodAccessorImpl.invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;+100
+j  sun.reflect.DelegatingMethodAccessorImpl.invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;+6
+j  java.lang.reflect.Method.invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;+56
+j  org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced([Ljava/lang/String;)V+45
+j  org.codehaus.plexus.classworlds.launcher.Launcher.launch([Ljava/lang/String;)V+2
+j  org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode([Ljava/lang/String;)I+101
+j  org.codehaus.plexus.classworlds.launcher.Launcher.main([Ljava/lang/String;)V+1
+v  ~StubRoutines::call_stub
+V  [jvm.dll+0x15aa85]
+V  [jvm.dll+0x220d7e]
+V  [jvm.dll+0x15ab1e]
+V  [jvm.dll+0xdca47]
+V  [jvm.dll+0xe4fdf]
+C  [javaw.exe+0x22ab]
+C  [javaw.exe+0xaebf]
+C  [javaw.exe+0xaf49]
+C  [kernel32.dll+0x4ee6c]
+C  [ntdll.dll+0x63648]
+C  [ntdll.dll+0x6361b]
+C  0x00000000
+
+Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
+j  sun.management.DiagnosticCommandImpl.executeDiagnosticCommand(Ljava/lang/String;)Ljava/lang/String;+0
+j  sun.management.DiagnosticCommandImpl.commandDescriptor(Lsun/management/DiagnosticCommandImpl$Wrapper;)Ljavax/management/Descriptor;+144
+j  sun.management.DiagnosticCommandImpl.getMBeanInfo()Ljavax/management/MBeanInfo;+182
+j  com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.getNewMBeanClassName(Ljava/lang/Object;)Ljava/lang/String;+13
+j  com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerMBean(Ljava/lang/Object;Ljavax/management/ObjectName;)Ljavax/management/ObjectInstance;+10
+j  com.sun.jmx.mbeanserver.JmxMBeanServer.registerMBean(Ljava/lang/Object;Ljavax/management/ObjectName;)Ljavax/management/ObjectInstance;+10
+j  java.lang.management.ManagementFactory$3.run()Ljava/lang/Void;+12
+j  java.lang.management.ManagementFactory$3.run()Ljava/lang/Object;+1
+v  ~StubRoutines::call_stub
+j  java.security.AccessController.doPrivileged(Ljava/security/PrivilegedExceptionAction;)Ljava/lang/Object;+0
+j  java.lang.management.ManagementFactory.addDynamicMBean(Ljavax/management/MBeanServer;Ljavax/management/DynamicMBean;Ljavax/management/ObjectName;)V+10
+j  java.lang.management.ManagementFactory.getPlatformMBeanServer()Ljavax/management/MBeanServer;+186
+j  org.apache.tomcat.util.modeler.Registry.getMBeanServer()Ljavax/management/MBeanServer;+82
+j  org.apache.catalina.util.LifecycleMBeanBase.initInternal()V+13
+j  org.apache.catalina.core.StandardServer.initInternal()V+1
+j  org.apache.catalina.util.LifecycleBase.init()V+29
+j  org.apache.catalina.util.LifecycleBase.start()V+142
+j  org.apache.catalina.startup.Tomcat.start()V+14
+j  org.apache.tomcat.maven.plugin.tomcat7.run.AbstractRunMojo.startContainer()V+1023
+j  org.apache.tomcat.maven.plugin.tomcat7.run.AbstractRunMojo.execute()V+118
+j  org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(Lorg/apache/maven/execution/MavenSession;Lorg/apache/maven/plugin/MojoExecution;)V+155
+j  org.apache.maven.lifecycle.internal.MojoExecutor.execute(Lorg/apache/maven/execution/MavenSession;Lorg/apache/maven/plugin/MojoExecution;Lorg/apache/maven/lifecycle/internal/ProjectIndex;Lorg/apache/maven/lifecycle/internal/DependencyContext;)V+220
+j  org.apache.maven.lifecycle.internal.MojoExecutor.execute(Lorg/apache/maven/execution/MavenSession;Lorg/apache/maven/plugin/MojoExecution;Lorg/apache/maven/lifecycle/internal/ProjectIndex;Lorg/apache/maven/lifecycle/internal/DependencyContext;Lorg/apache/maven/lifecycle/internal/PhaseRecorder;)V+6
+j  org.apache.maven.lifecycle.internal.MojoExecutor.execute(Lorg/apache/maven/execution/MavenSession;Ljava/util/List;Lorg/apache/maven/lifecycle/internal/ProjectIndex;)V+60
+j  org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(Lorg/apache/maven/execution/MavenSession;Lorg/apache/maven/execution/MavenSession;Lorg/apache/maven/lifecycle/internal/ReactorContext;Lorg/apache/maven/project/MavenProject;Lorg/apache/maven/lifecycle/internal/TaskSegment;)V+180
+j  org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(Lorg/apache/maven/execution/MavenSession;Lorg/apache/maven/lifecycle/internal/ReactorContext;Lorg/apache/maven/project/MavenProject;Lorg/apache/maven/lifecycle/internal/TaskSegment;)V+7
+j  org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build(Lorg/apache/maven/execution/MavenSession;Lorg/apache/maven/lifecycle/internal/ReactorContext;Lorg/apache/maven/lifecycle/internal/ProjectBuildList;Ljava/util/List;Lorg/apache/maven/lifecycle/internal/ReactorBuildStatus;)V+77
+j  org.apache.maven.lifecycle.internal.LifecycleStarter.execute(Lorg/apache/maven/execution/MavenSession;)V+353
+j  org.apache.maven.DefaultMaven.doExecute(Lorg/apache/maven/execution/MavenExecutionRequest;Lorg/apache/maven/execution/MavenSession;Lorg/apache/maven/execution/MavenExecutionResult;Lorg/eclipse/aether/DefaultRepositorySystemSession;)Lorg/apache/maven/execution/MavenExecutionResult;+422
+j  org.apache.maven.DefaultMaven.doExecute(Lorg/apache/maven/execution/MavenExecutionRequest;)Lorg/apache/maven/execution/MavenExecutionResult;+99
+j  org.apache.maven.DefaultMaven.execute(Lorg/apache/maven/execution/MavenExecutionRequest;)Lorg/apache/maven/execution/MavenExecutionResult;+2
+j  org.apache.maven.cli.MavenCli.execute(Lorg/apache/maven/cli/CliRequest;)I+27
+j  org.apache.maven.cli.MavenCli.doMain(Lorg/apache/maven/cli/CliRequest;)I+66
+j  org.apache.maven.cli.MavenCli.main([Ljava/lang/String;Lorg/codehaus/plexus/classworlds/ClassWorld;)I+24
+v  ~StubRoutines::call_stub
+j  sun.reflect.NativeMethodAccessorImpl.invoke0(Ljava/lang/reflect/Method;Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;+0
+j  sun.reflect.NativeMethodAccessorImpl.invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;+100
+j  sun.reflect.DelegatingMethodAccessorImpl.invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;+6
+j  java.lang.reflect.Method.invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;+56
+j  org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced([Ljava/lang/String;)V+45
+j  org.codehaus.plexus.classworlds.launcher.Launcher.launch([Ljava/lang/String;)V+2
+j  org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode([Ljava/lang/String;)I+101
+j  org.codehaus.plexus.classworlds.launcher.Launcher.main([Ljava/lang/String;)V+1
+v  ~StubRoutines::call_stub
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x009f8000 JavaThread "Service Thread" daemon [_thread_blocked, id=9452, stack(0x017c0000,0x01810000)]
+  0x009f1000 JavaThread "C1 CompilerThread0" daemon [_thread_in_native, id=1220, stack(0x145b0000,0x14600000)]
+  0x009ef400 JavaThread "Attach Listener" daemon [_thread_blocked, id=9316, stack(0x14ba0000,0x14bf0000)]
+  0x009ec400 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=3528, stack(0x14520000,0x14570000)]
+  0x009d0c00 JavaThread "Finalizer" daemon [_thread_blocked, id=4016, stack(0x016f0000,0x01740000)]
+  0x00974800 JavaThread "Reference Handler" daemon [_thread_blocked, id=6100, stack(0x038e0000,0x03930000)]
+=>0x0058c400 JavaThread "main" [_thread_in_vm, id=1332, stack(0x00a40000,0x00a90000)]
+
+Other Threads:
+  0x00970800 VMThread [stack: 0x03890000,0x038e0000] [id=8280]
+  0x14c40400 WatcherThread [stack: 0x14490000,0x144e0000] [id=7784]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap:
+ def new generation   total 6016K, used 5558K [0x03a00000, 0x04080000, 0x08f50000)
+  eden space 5376K,  91% used [0x03a00000, 0x03ecda20, 0x03f40000)
+  from space 640K,  99% used [0x03f40000, 0x03fdfec0, 0x03fe0000)
+  to   space 640K,   0% used [0x03fe0000, 0x03fe0000, 0x04080000)
+ tenured generation   total 13292K, used 10290K [0x08f50000, 0x09c4b000, 0x13a00000)
+   the space 13292K,  77% used [0x08f50000, 0x0995cbe8, 0x0995cc00, 0x09c4b000)
+ Metaspace       used 8963K, capacity 9954K, committed 9984K, reserved 12672K
+
+Card table byte_map: [0x00590000,0x00620000] byte_map_base: 0x00573000
+
+Polling page: 0x00220000
+
+CodeCache: size=32768Kb used=2609Kb max_used=2609Kb free=30158Kb
+ bounds [0x01870000, 0x01b00000, 0x03870000]
+ total_blobs=1509 nmethods=1321 adapters=119
+ compilation: enabled
+
+Compilation events (10 events):
+Event: 6.410 Thread 0x009f1000 nmethod 1340 0x01af9b88 code [0x01af9dd0, 0x01afa46c]
+Event: 6.476 Thread 0x009f1000 1341             java.lang.Class$MethodArray::compactAndTrim (69 bytes)
+Event: 6.477 Thread 0x009f1000 nmethod 1341 0x01afb148 code [0x01afb260, 0x01afb43c]
+Event: 6.492 Thread 0x009f1000 1342  s          java.io.ByteArrayOutputStream::write (66 bytes)
+Event: 6.493 Thread 0x009f1000 nmethod 1342 0x01afb708 code [0x01afb830, 0x01afbb74]
+Event: 6.500 Thread 0x009f1000 1343             sun.reflect.generics.reflectiveObjects.ParameterizedTypeImpl::getActualTypeArguments (11 bytes)
+Event: 6.500 Thread 0x009f1000 nmethod 1343 0x01afbe88 code [0x01afbf90, 0x01afc06c]
+Event: 6.503 Thread 0x009f1000 1344             java.lang.String$CaseInsensitiveComparator::compare (13 bytes)
+Event: 6.503 Thread 0x009f1000 nmethod 1344 0x01afc648 code [0x01afc750, 0x01afc82c]
+Event: 6.509 Thread 0x009f1000 1345             javax.management.ObjectName::construct (1228 bytes)
+
+GC Heap History (10 events):
+Event: 5.597 GC heap before
+{Heap before GC invocations=32 (full 1):
+ def new generation   total 6016K, used 5917K [0x03a00000, 0x04080000, 0x08f50000)
+  eden space 5376K, 100% used [0x03a00000, 0x03f40000, 0x03f40000)
+  from space 640K,  84% used [0x03fe0000, 0x040675c0, 0x04080000)
+  to   space 640K,   0% used [0x03f40000, 0x03f40000, 0x03fe0000)
+ tenured generation   total 13292K, used 8530K [0x08f50000, 0x09c4b000, 0x13a00000)
+   the space 13292K,  64% used [0x08f50000, 0x097a4ab0, 0x097a4c00, 0x09c4b000)
+ Metaspace       used 6765K, capacity 8504K, committed 8576K, reserved 8576K
+Event: 5.600 GC heap after
+Heap after GC invocations=33 (full 1):
+ def new generation   total 6016K, used 290K [0x03a00000, 0x04080000, 0x08f50000)
+  eden space 5376K,   0% used [0x03a00000, 0x03a00000, 0x03f40000)
+  from space 640K,  45% used [0x03f40000, 0x03f88bd8, 0x03fe0000)
+  to   space 640K,   0% used [0x03fe0000, 0x03fe0000, 0x04080000)
+ tenured generation   total 13292K, used 8958K [0x08f50000, 0x09c4b000, 0x13a00000)
+   the space 13292K,  67% used [0x08f50000, 0x0980fb50, 0x0980fc00, 0x09c4b000)
+ Metaspace       used 6765K, capacity 8504K, committed 8576K, reserved 8576K
+}
+Event: 5.762 GC heap before
+{Heap before GC invocations=33 (full 1):
+ def new generation   total 6016K, used 5649K [0x03a00000, 0x04080000, 0x08f50000)
+  eden space 5376K,  99% used [0x03a00000, 0x03f3ba30, 0x03f40000)
+  from space 640K,  45% used [0x03f40000, 0x03f88bd8, 0x03fe0000)
+  to   space 640K,   0% used [0x03fe0000, 0x03fe0000, 0x04080000)
+ tenured generation   total 13292K, used 8958K [0x08f50000, 0x09c4b000, 0x13a00000)
+   the space 13292K,  67% used [0x08f50000, 0x0980fb50, 0x0980fc00, 0x09c4b000)
+ Metaspace       used 6833K, capacity 8602K, committed 8704K, reserved 9600K
+Event: 5.765 GC heap after
+Heap after GC invocations=34 (full 1):
+ def new generation   total 6016K, used 640K [0x03a00000, 0x04080000, 0x08f50000)
+  eden space 5376K,   0% used [0x03a00000, 0x03a00000, 0x03f40000)
+  from space 640K, 100% used [0x03fe0000, 0x04080000, 0x04080000)
+  to   space 640K,   0% used [0x03f40000, 0x03f40000, 0x03fe0000)
+ tenured generation   total 13292K, used 9250K [0x08f50000, 0x09c4b000, 0x13a00000)
+   the space 13292K,  69% used [0x08f50000, 0x098588b8, 0x09858a00, 0x09c4b000)
+ Metaspace       used 6833K, capacity 8602K, committed 8704K, reserved 9600K
+}
+Event: 5.890 GC heap before
+{Heap before GC invocations=34 (full 1):
+ def new generation   total 6016K, used 6016K [0x03a00000, 0x04080000, 0x08f50000)
+  eden space 5376K, 100% used [0x03a00000, 0x03f40000, 0x03f40000)
+  from space 640K, 100% used [0x03fe0000, 0x04080000, 0x04080000)
+  to   space 640K,   0% used [0x03f40000, 0x03f40000, 0x03fe0000)
+ tenured generation   total 13292K, used 9250K [0x08f50000, 0x09c4b000, 0x13a00000)
+   the space 13292K,  69% used [0x08f50000, 0x098588b8, 0x09858a00, 0x09c4b000)
+ Metaspace       used 7171K, capacity 8926K, committed 8960K, reserved 9600K
+Event: 5.893 GC heap after
+Heap after GC invocations=35 (full 1):
+ def new generation   total 6016K, used 598K [0x03a00000, 0x04080000, 0x08f50000)
+  eden space 5376K,   0% used [0x03a00000, 0x03a00000, 0x03f40000)
+  from space 640K,  93% used [0x03f40000, 0x03fd5a98, 0x03fe0000)
+  to   space 640K,   0% used [0x03fe0000, 0x03fe0000, 0x04080000)
+ tenured generation   total 13292K, used 9602K [0x08f50000, 0x09c4b000, 0x13a00000)
+   the space 13292K,  72% used [0x08f50000, 0x098b0a90, 0x098b0c00, 0x09c4b000)
+ Metaspace       used 7171K, capacity 8926K, committed 8960K, reserved 9600K
+}
+Event: 6.024 GC heap before
+{Heap before GC invocations=35 (full 1):
+ def new generation   total 6016K, used 5974K [0x03a00000, 0x04080000, 0x08f50000)
+  eden space 5376K, 100% used [0x03a00000, 0x03f40000, 0x03f40000)
+  from space 640K,  93% used [0x03f40000, 0x03fd5a98, 0x03fe0000)
+  to   space 640K,   0% used [0x03fe0000, 0x03fe0000, 0x04080000)
+ tenured generation   total 13292K, used 9602K [0x08f50000, 0x09c4b000, 0x13a00000)
+   the space 13292K,  72% used [0x08f50000, 0x098b0a90, 0x098b0c00, 0x09c4b000)
+ Metaspace       used 7471K, capacity 9218K, committed 9344K, reserved 9600K
+Event: 6.028 GC heap after
+Heap after GC invocations=36 (full 1):
+ def new generation   total 6016K, used 640K [0x03a00000, 0x04080000, 0x08f50000)
+  eden space 5376K,   0% used [0x03a00000, 0x03a00000, 0x03f40000)
+  from space 640K, 100% used [0x03fe0000, 0x04080000, 0x04080000)
+  to   space 640K,   0% used [0x03f40000, 0x03f40000, 0x03fe0000)
+ tenured generation   total 13292K, used 9851K [0x08f50000, 0x09c4b000, 0x13a00000)
+   the space 13292K,  74% used [0x08f50000, 0x098eef00, 0x098ef000, 0x09c4b000)
+ Metaspace       used 7471K, capacity 9218K, committed 9344K, reserved 9600K
+}
+Event: 6.347 GC heap before
+{Heap before GC invocations=36 (full 1):
+ def new generation   total 6016K, used 6014K [0x03a00000, 0x04080000, 0x08f50000)
+  eden space 5376K,  99% used [0x03a00000, 0x03f3fa08, 0x03f40000)
+  from space 640K, 100% used [0x03fe0000, 0x04080000, 0x04080000)
+  to   space 640K,   0% used [0x03f40000, 0x03f40000, 0x03fe0000)
+ tenured generation   total 13292K, used 9851K [0x08f50000, 0x09c4b000, 0x13a00000)
+   the space 13292K,  74% used [0x08f50000, 0x098eef00, 0x098ef000, 0x09c4b000)
+ Metaspace       used 8056K, capacity 9634K, committed 9728K, reserved 10624K
+Event: 6.351 GC heap after
+Heap after GC invocations=37 (full 1):
+ def new generation   total 6016K, used 639K [0x03a00000, 0x04080000, 0x08f50000)
+  eden space 5376K,   0% used [0x03a00000, 0x03a00000, 0x03f40000)
+  from space 640K,  99% used [0x03f40000, 0x03fdfec0, 0x03fe0000)
+  to   space 640K,   0% used [0x03fe0000, 0x03fe0000, 0x04080000)
+ tenured generation   total 13292K, used 10290K [0x08f50000, 0x09c4b000, 0x13a00000)
+   the space 13292K,  77% used [0x08f50000, 0x0995cbe8, 0x0995cc00, 0x09c4b000)
+ Metaspace       used 8056K, capacity 9634K, committed 9728K, reserved 10624K
+}
+
+Deoptimization events (0 events):
+No events
+
+Internal exceptions (10 events):
+Event: 5.833 Thread 0x0058c400 Exception <a 'java/lang/ArrayIndexOutOfBoundsException'> (0x03cc38d0) thrown at [C:\workspace\8-2-build-windows-i586-cygwin\jdk8u121\8372\hotspot\src\share\vm\runtime\sharedRuntime.cpp, line 605]
+Event: 5.833 Thread 0x0058c400 Exception <a 'java/lang/ArrayIndexOutOfBoundsException'> (0x03cc4d48) thrown at [C:\workspace\8-2-build-windows-i586-cygwin\jdk8u121\8372\hotspot\src\share\vm\runtime\sharedRuntime.cpp, line 605]
+Event: 5.833 Thread 0x0058c400 Exception <a 'java/lang/ArrayIndexOutOfBoundsException'> (0x03cc61e0) thrown at [C:\workspace\8-2-build-windows-i586-cygwin\jdk8u121\8372\hotspot\src\share\vm\runtime\sharedRuntime.cpp, line 605]
+Event: 6.019 Thread 0x0058c400 Exception <a 'java/io/FileNotFoundException'> (0x03f05d00) thrown at [C:\workspace\8-2-build-windows-i586-cygwin\jdk8u121\8372\hotspot\src\share\vm\prims\jni.cpp, line 709]
+Event: 6.493 Thread 0x0058c400 Exception <a 'java/lang/ArrayIndexOutOfBoundsException'> (0x03e4c180) thrown at [C:\workspace\8-2-build-windows-i586-cygwin\jdk8u121\8372\hotspot\src\share\vm\runtime\sharedRuntime.cpp, line 605]
+Event: 6.494 Thread 0x0058c400 Exception <a 'java/lang/ArrayIndexOutOfBoundsException'> (0x03e4d918) thrown at [C:\workspace\8-2-build-windows-i586-cygwin\jdk8u121\8372\hotspot\src\share\vm\runtime\sharedRuntime.cpp, line 605]
+Event: 6.499 Thread 0x0058c400 Exception <a 'java/lang/ArrayIndexOutOfBoundsException'> (0x03e6e700) thrown at [C:\workspace\8-2-build-windows-i586-cygwin\jdk8u121\8372\hotspot\src\share\vm\runtime\sharedRuntime.cpp, line 605]
+Event: 6.499 Thread 0x0058c400 Exception <a 'java/lang/ArrayIndexOutOfBoundsException'> (0x03e6fe48) thrown at [C:\workspace\8-2-build-windows-i586-cygwin\jdk8u121\8372\hotspot\src\share\vm\runtime\sharedRuntime.cpp, line 605]
+Event: 6.505 Thread 0x0058c400 Exception <a 'java/lang/ArrayIndexOutOfBoundsException'> (0x03e921b0) thrown at [C:\workspace\8-2-build-windows-i586-cygwin\jdk8u121\8372\hotspot\src\share\vm\runtime\sharedRuntime.cpp, line 605]
+Event: 6.508 Thread 0x0058c400 Exception <a 'java/lang/ArrayIndexOutOfBoundsException'> (0x03e9e910) thrown at [C:\workspace\8-2-build-windows-i586-cygwin\jdk8u121\8372\hotspot\src\share\vm\runtime\sharedRuntime.cpp, line 605]
+
+Events (10 events):
+Event: 6.509 loading class java/lang/management/ManagementFactory$3
+Event: 6.509 loading class java/lang/management/ManagementFactory$3 done
+Event: 6.509 loading class sun/management/DiagnosticCommandImpl$OperationInfoComparator
+Event: 6.510 loading class sun/management/DiagnosticCommandImpl$OperationInfoComparator done
+Event: 6.510 loading class sun/management/DiagnosticCommandInfo
+Event: 6.510 loading class sun/management/DiagnosticCommandInfo done
+Event: 6.510 loading class sun/management/DiagnosticCommandArgumentInfo
+Event: 6.510 loading class sun/management/DiagnosticCommandArgumentInfo done
+Event: 6.510 loading class sun/management/DiagnosticCommandImpl$Wrapper
+Event: 6.511 loading class sun/management/DiagnosticCommandImpl$Wrapper done
+
+
+Dynamic libraries:
+0x00a90000 - 0x00ac3000 	C:\Program Files\Java\jdk1.8.0_121\bin\javaw.exe
+0x77340000 - 0x77482000 	C:\Windows\SYSTEM32\ntdll.dll
+0x755f0000 - 0x756c4000 	C:\Windows\system32\kernel32.dll
+0x75590000 - 0x755db000 	C:\Windows\system32\KERNELBASE.dll
+0x774e0000 - 0x77581000 	C:\Windows\system32\ADVAPI32.dll
+0x76d10000 - 0x76dbc000 	C:\Windows\system32\msvcrt.dll
+0x75c70000 - 0x75c89000 	C:\Windows\SYSTEM32\sechost.dll
+0x76b90000 - 0x76c32000 	C:\Windows\system32\RPCRT4.dll
+0x77040000 - 0x77109000 	C:\Windows\system32\USER32.dll
+0x75c00000 - 0x75c4e000 	C:\Windows\system32\GDI32.dll
+0x75730000 - 0x7573a000 	C:\Windows\system32\LPK.dll
+0x76c70000 - 0x76d0d000 	C:\Windows\system32\USP10.dll
+0x73660000 - 0x737fe000 	C:\Windows\WinSxS\x86_microsoft.windows.common-controls_6595b64144ccf1df_6.0.7601.18837_none_41e855142bd5705d\COMCTL32.dll
+0x76f10000 - 0x76f67000 	C:\Windows\system32\SHLWAPI.dll
+0x75c50000 - 0x75c6f000 	C:\Windows\system32\IMM32.DLL
+0x76f70000 - 0x7703c000 	C:\Windows\system32\MSCTF.dll
+0x72130000 - 0x721ef000 	C:\Program Files\Java\jdk1.8.0_121\jre\bin\msvcr100.dll
+0x6c330000 - 0x6c6fe000 	C:\Program Files\Java\jdk1.8.0_121\jre\bin\client\jvm.dll
+0x69680000 - 0x69687000 	C:\Windows\system32\WSOCK32.dll
+0x75da0000 - 0x75dd5000 	C:\Windows\system32\WS2_32.dll
+0x75980000 - 0x75986000 	C:\Windows\system32\NSI.dll
+0x72990000 - 0x729c2000 	C:\Windows\system32\WINMM.dll
+0x747e0000 - 0x747e9000 	C:\Windows\system32\VERSION.dll
+0x755e0000 - 0x755e5000 	C:\Windows\system32\PSAPI.DLL
+0x72cd0000 - 0x72cdc000 	C:\Program Files\Java\jdk1.8.0_121\jre\bin\verify.dll
+0x72b80000 - 0x72ba1000 	C:\Program Files\Java\jdk1.8.0_121\jre\bin\java.dll
+0x72cb0000 - 0x72cc3000 	C:\Program Files\Java\jdk1.8.0_121\jre\bin\zip.dll
+0x75f40000 - 0x76b8b000 	C:\Windows\system32\SHELL32.dll
+0x75de0000 - 0x75f3c000 	C:\Windows\system32\ole32.dll
+0x752b0000 - 0x752bb000 	C:\Windows\system32\profapi.dll
+0x72a90000 - 0x72a98000 	G:\apache-maven-3.5.0-bin\apache-maven-3.5.0\lib\jansi-native\windows32\jansi.dll
+0x72ab0000 - 0x72ac6000 	C:\Program Files\Java\jdk1.8.0_121\jre\bin\net.dll
+0x74cb0000 - 0x74cec000 	C:\Windows\system32\mswsock.dll
+0x74ca0000 - 0x74ca6000 	C:\Windows\System32\wship6.dll
+0x72aa0000 - 0x72aaf000 	C:\Program Files\Java\jdk1.8.0_121\jre\bin\nio.dll
+0x74cf0000 - 0x74d07000 	C:\Windows\system32\CRYPTSP.dll
+0x74a80000 - 0x74abb000 	C:\Windows\system32\rsaenh.dll
+0x75440000 - 0x75457000 	C:\Windows\system32\USERENV.dll
+0x751d0000 - 0x751dc000 	C:\Windows\system32\CRYPTBASE.dll
+0x74500000 - 0x7451c000 	C:\Windows\system32\IPHLPAPI.DLL
+0x744f0000 - 0x744f7000 	C:\Windows\system32\WINNSI.DLL
+0x72d00000 - 0x72d0d000 	C:\Windows\system32\dhcpcsvc6.DLL
+0x72ce0000 - 0x72cf2000 	C:\Windows\system32\dhcpcsvc.DLL
+0x72b70000 - 0x72b7a000 	C:\Program Files\Java\jdk1.8.0_121\jre\bin\management.dll
+
+VM Arguments:
+jvm_args: -Dmaven.home=G:\apache-maven-3.5.0-bin\apache-maven-3.5.0 -Dclassworlds.conf=C:\Users\lenovo\workspace\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf7730710665799955190.tmp -Dmaven.multiModuleProjectDirectory=C:\Users\lenovo\workspace\springmvc -Dfile.encoding=GBK 
+java_command: org.codehaus.plexus.classworlds.launcher.Launcher -B tomcat7:run
+java_class_path (initial): G:\apache-maven-3.5.0-bin\apache-maven-3.5.0\boot\plexus-classworlds-2.5.2.jar
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+PATH=C:/Program Files/Java/jre1.8.0_121/bin/client;C:/Program Files/Java/jre1.8.0_121/bin;C:/Program Files/Java/jre1.8.0_121/lib/i386;C:\ProgramData\Oracle\Java\javapath;C:\Program Files\NVIDIA Corporation\PhysX\Common;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Broadcom\Broadcom 802.11 Network Adapter\Driver;C:\cygwin\bin;C:\cygwin\usr\sbin;C:\Program Files\scala\bin;C:\Program Files\scala\jre\bin;G:\apache-maven-3.5.0-bin\apache-maven-3.5.0\bin;C:\Program Files\MySQL\MySQL Utilities 1.6\;E:\apache-tomcat-7.0.78-windows-x86\apache-tomcat-7.0.78\lib;E:\apache-tomcat-7.0.78-windows-x86\apache-tomcat-7.0.78\bin;G:\eclipse;
+USERNAME=lenovo
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=x86 Family 6 Model 37 Stepping 5, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 7 Build 7601 (6.1.7601.18847)
+
+CPU:total 4 (2 cores per cpu, 2 threads per core) family 6 model 37 stepping 5, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, ht, tsc, tscinvbit
+
+Memory: 4k page, physical 2022248k(47152k free), swap 3494720k(3688k free)
+
+vm_info: Java HotSpot(TM) Client VM (25.121-b13) for windows-x86 JRE (1.8.0_121-b13), built on Dec 12 2016 18:17:00 by "java_re" with MS VC++ 10.0 (VS2010)
+
+time: Mon Jul 10 23:09:11 2017
+elapsed time: 6 seconds (0d 0h 0m 6s)
+

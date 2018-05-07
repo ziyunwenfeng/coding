@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.hibernatedemo">
+	<class name="Emp" table="t_emp">
+		<!-- 如果是Model类和表名一样，则table属性可以省略 -->
+		<id name="id">
+			<generator class="increment"></generator>
+		</id>
+		<!-- 指定数据库主键， name指定Model类中的属性，column属性指定表中的列。如果是Model类属性和列名一样，则column属性可以省略 -->
+		<property name="name"></property><!-- 指定其他属性 -->
+		<one-to-one name="addr" cascade = "all"></one-to-one>
+	</class>
+</hibernate-mapping>

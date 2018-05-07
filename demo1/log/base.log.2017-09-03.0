@@ -1,0 +1,24 @@
+2017-09-03 22:49:23,611 INFO (StartupInfoLogger.java:48)- Starting Demo1Application on lenovo-pc with PID 10700 (C:\Users\lenovo\workspace\demo1\target\classes started by lenovo in C:\Users\lenovo\workspace\demo1)
+2017-09-03 22:49:23,618 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v1.5.6.RELEASE, Spring v4.3.10.RELEASE
+2017-09-03 22:49:23,619 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
+2017-09-03 22:49:30,858 INFO (StartupInfoLogger.java:57)- Started Demo1Application in 7.795 seconds (JVM running for 8.977)
+2017-09-03 22:52:32,599 INFO (StartupInfoLogger.java:48)- Starting Demo1Application on lenovo-pc with PID 4704 (C:\Users\lenovo\workspace\demo1\target\classes started by lenovo in C:\Users\lenovo\workspace\demo1)
+2017-09-03 22:52:32,604 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v1.5.6.RELEASE, Spring v4.3.10.RELEASE
+2017-09-03 22:52:32,605 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
+2017-09-03 22:52:39,572 INFO (StartupInfoLogger.java:57)- Started Demo1Application in 7.444 seconds (JVM running for 8.561)
+2017-09-03 22:56:03,472 INFO (StartupInfoLogger.java:48)- Starting Demo1Application on lenovo-pc with PID 13272 (C:\Users\lenovo\workspace\demo1\target\classes started by lenovo in C:\Users\lenovo\workspace\demo1)
+2017-09-03 22:56:03,477 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v1.5.6.RELEASE, Spring v4.3.10.RELEASE
+2017-09-03 22:56:03,478 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
+2017-09-03 22:56:10,782 INFO (StartupInfoLogger.java:57)- Started Demo1Application in 7.803 seconds (JVM running for 8.903)
+2017-09-03 22:57:22,333 INFO (StartupInfoLogger.java:48)- Starting Demo1Application on lenovo-pc with PID 14128 (C:\Users\lenovo\workspace\demo1\target\classes started by lenovo in C:\Users\lenovo\workspace\demo1)
+2017-09-03 22:57:22,338 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v1.5.6.RELEASE, Spring v4.3.10.RELEASE
+2017-09-03 22:57:22,339 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
+2017-09-03 22:57:29,503 INFO (StartupInfoLogger.java:57)- Started Demo1Application in 7.709 seconds (JVM running for 8.855)
+2017-09-03 22:58:36,718 INFO (StartupInfoLogger.java:48)- Starting Demo1Application on lenovo-pc with PID 8324 (C:\Users\lenovo\workspace\demo1\target\classes started by lenovo in C:\Users\lenovo\workspace\demo1)
+2017-09-03 22:58:36,722 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v1.5.6.RELEASE, Spring v4.3.10.RELEASE
+2017-09-03 22:58:36,723 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
+2017-09-03 22:58:44,038 INFO (StartupInfoLogger.java:57)- Started Demo1Application in 7.798 seconds (JVM running for 8.888)
+2017-09-03 23:16:35,516 INFO (StartupInfoLogger.java:48)- Starting Demo1Application on lenovo-pc with PID 2012 (C:\Users\lenovo\workspace\demo1\target\classes started by lenovo in C:\Users\lenovo\workspace\demo1)
+2017-09-03 23:16:35,521 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v1.5.6.RELEASE, Spring v4.3.10.RELEASE
+2017-09-03 23:16:35,521 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
+2017-09-03 23:16:43,171 INFO (StartupInfoLogger.java:57)- Started Demo1Application in 8.155 seconds (JVM running for 9.336)

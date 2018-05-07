@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.hibernatedemo">
+	<class name="Addr" table="t_addr">
+		<!-- 如果是Model类和表名一样，则table属性可以省略 -->
+		<id name="addrId">
+			<generator class="foreign">
+				<param name = "property">emp</param>
+			</generator>
+		</id>
+		<!-- 指定数据库主键， name指定Model类中的属性，column属性指定表中的列。如果是Model类属性和列名一样，则column属性可以省略 -->
+		<property name="city"></property><!-- 指定其他属性 -->
+		<one-to-one name="emp" cascade = "all"></one-to-one>
+	</class>
+</hibernate-mapping>

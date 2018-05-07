@@ -1,0 +1,63 @@
+2017-08-28 16:20:45,394 INFO (StartupInfoLogger.java:48)- Starting Demo1Application on SHVM01224 with PID 7856 (E:\code\demo1\target\classes started by wenfeng.tang in E:\code\demo1)
+2017-08-28 16:20:45,400 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v1.5.6.RELEASE, Spring v4.3.10.RELEASE
+2017-08-28 16:20:45,400 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
+2017-08-28 16:20:48,956 INFO (StartupInfoLogger.java:57)- Started Demo1Application in 4.063 seconds (JVM running for 5.024)
+2017-08-28 16:21:11,112 DEBUG (Demo1Application.java:20)- /
+2017-08-28 16:21:27,702 DEBUG (Demo1Application.java:20)- /
+2017-08-28 16:21:28,545 DEBUG (Demo1Application.java:20)- /
+2017-08-28 16:21:28,742 DEBUG (Demo1Application.java:20)- /
+2017-08-28 16:21:28,889 DEBUG (Demo1Application.java:20)- /
+2017-08-28 16:21:36,522 INFO (StartupInfoLogger.java:48)- Starting Demo1Application on SHVM01224 with PID 5864 (E:\code\demo1\target\classes started by wenfeng.tang in E:\code\demo1)
+2017-08-28 16:21:36,527 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v1.5.6.RELEASE, Spring v4.3.10.RELEASE
+2017-08-28 16:21:36,528 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
+2017-08-28 16:21:40,105 INFO (StartupInfoLogger.java:57)- Started Demo1Application in 4.13 seconds (JVM running for 5.156)
+2017-08-28 16:21:44,385 DEBUG (Demo1Application.java:20)- /
+2017-08-28 16:22:03,619 INFO (StartupInfoLogger.java:48)- Starting Demo1Application on SHVM01224 with PID 668 (E:\code\demo1\target\classes started by wenfeng.tang in E:\code\demo1)
+2017-08-28 16:22:03,624 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v1.5.6.RELEASE, Spring v4.3.10.RELEASE
+2017-08-28 16:22:03,625 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
+2017-08-28 16:22:07,018 INFO (StartupInfoLogger.java:57)- Started Demo1Application in 3.892 seconds (JVM running for 4.847)
+2017-08-28 16:22:11,636 DEBUG (Demo1Application.java:20)- in the /
+2017-08-28 16:22:12,488 DEBUG (Demo1Application.java:20)- in the /
+2017-08-28 16:22:12,661 DEBUG (Demo1Application.java:20)- in the /
+2017-08-28 17:38:24,605 INFO (StartupInfoLogger.java:48)- Starting Demo1ApplicationTests on SHVM01224 with PID 5236 (started by wenfeng.tang in E:\code\demo1)
+2017-08-28 17:38:24,606 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v1.5.6.RELEASE, Spring v4.3.10.RELEASE
+2017-08-28 17:38:24,609 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
+2017-08-28 17:38:27,214 INFO (StartupInfoLogger.java:57)- Started Demo1ApplicationTests in 3.087 seconds (JVM running for 4.827)
+2017-08-28 20:43:14,048 INFO (StartupInfoLogger.java:48)- Starting Demo1ApplicationTests on SHVM01224 with PID 11224 (started by wenfeng.tang in E:\code\demo1)
+2017-08-28 20:43:14,049 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v1.5.6.RELEASE, Spring v4.3.10.RELEASE
+2017-08-28 20:43:14,049 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
+2017-08-28 20:43:24,486 INFO (StartupInfoLogger.java:48)- Starting Demo1Application on SHVM01224 with PID 5756 (E:\code\demo1\target\classes started by wenfeng.tang in E:\code\demo1)
+2017-08-28 20:43:24,491 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v1.5.6.RELEASE, Spring v4.3.10.RELEASE
+2017-08-28 20:43:24,492 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
+2017-08-28 20:44:49,282 INFO (StartupInfoLogger.java:48)- Starting Demo1Application on SHVM01224 with PID 9132 (E:\code\demo1\target\classes started by wenfeng.tang in E:\code\demo1)
+2017-08-28 20:44:49,287 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v1.5.6.RELEASE, Spring v4.3.10.RELEASE
+2017-08-28 20:44:49,287 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
+2017-08-28 20:59:31,411 INFO (StartupInfoLogger.java:48)- Starting Demo1Application on SHVM01224 with PID 8340 (E:\code\demo1\target\classes started by wenfeng.tang in E:\code\demo1)
+2017-08-28 20:59:31,417 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v1.5.6.RELEASE, Spring v4.3.10.RELEASE
+2017-08-28 20:59:31,418 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
+2017-08-28 21:02:19,946 INFO (StartupInfoLogger.java:48)- Starting Demo1Application on SHVM01224 with PID 11008 (E:\code\demo1\target\classes started by wenfeng.tang in E:\code\demo1)
+2017-08-28 21:02:20,004 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v1.5.6.RELEASE, Spring v4.3.10.RELEASE
+2017-08-28 21:02:20,004 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
+2017-08-28 21:18:41,215 INFO (StartupInfoLogger.java:48)- Starting Demo1Application on SHVM01224 with PID 8628 (E:\code\demo1\target\classes started by wenfeng.tang in E:\code\demo1)
+2017-08-28 21:18:41,221 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v1.5.6.RELEASE, Spring v4.3.10.RELEASE
+2017-08-28 21:18:41,222 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
+2017-08-28 21:20:50,137 INFO (StartupInfoLogger.java:48)- Starting Demo1Application on SHVM01224 with PID 8036 (E:\code\demo1\target\classes started by wenfeng.tang in E:\code\demo1)
+2017-08-28 21:20:50,143 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v1.5.6.RELEASE, Spring v4.3.10.RELEASE
+2017-08-28 21:20:50,144 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
+2017-08-28 21:20:59,163 INFO (StartupInfoLogger.java:57)- Started Demo1Application in 9.529 seconds (JVM running for 10.642)
+2017-08-28 23:47:15,172 INFO (StartupInfoLogger.java:48)- Starting Demo1ApplicationTests on lenovo-pc with PID 272 (started by lenovo in C:\Users\lenovo\workspace\demo1)
+2017-08-28 23:47:15,173 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v1.5.6.RELEASE, Spring v4.3.10.RELEASE
+2017-08-28 23:47:15,174 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
+2017-08-28 23:47:15,174 INFO (StartupInfoLogger.java:48)- Starting Demo1ApplicationTests on lenovo-pc with PID 3860 (started by lenovo in C:\Users\lenovo\workspace\demo1)
+2017-08-28 23:47:15,175 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v1.5.6.RELEASE, Spring v4.3.10.RELEASE
+2017-08-28 23:47:15,175 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
+2017-08-28 23:52:45,261 INFO (StartupInfoLogger.java:48)- Starting Demo1ApplicationTests on lenovo-pc with PID 2284 (started by lenovo in C:\Users\lenovo\workspace\demo1)
+2017-08-28 23:52:45,262 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v1.5.6.RELEASE, Spring v4.3.10.RELEASE
+2017-08-28 23:52:45,262 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
+2017-08-28 23:53:26,296 INFO (StartupInfoLogger.java:48)- Starting Demo1Application on lenovo-pc with PID 1804 (C:\Users\lenovo\workspace\demo1\target\classes started by lenovo in C:\Users\lenovo\workspace\demo1)
+2017-08-28 23:53:26,302 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v1.5.6.RELEASE, Spring v4.3.10.RELEASE
+2017-08-28 23:53:26,302 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
+2017-08-28 23:54:47,530 INFO (StartupInfoLogger.java:48)- Starting Demo1Application on lenovo-pc with PID 3116 (C:\Users\lenovo\workspace\demo1\target\classes started by lenovo in C:\Users\lenovo\workspace\demo1)
+2017-08-28 23:54:47,536 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v1.5.6.RELEASE, Spring v4.3.10.RELEASE
+2017-08-28 23:54:47,537 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
+2017-08-28 23:54:54,166 INFO (StartupInfoLogger.java:57)- Started Demo1Application in 7.02 seconds (JVM running for 7.695)

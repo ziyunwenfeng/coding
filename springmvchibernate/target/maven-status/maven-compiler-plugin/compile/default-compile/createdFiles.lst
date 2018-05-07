@@ -1,0 +1,5 @@
+entity\User.class
+dao\RedisDAO.class
+controller\UserController.class
+dao\UserDAO.class
+service\UserService.class

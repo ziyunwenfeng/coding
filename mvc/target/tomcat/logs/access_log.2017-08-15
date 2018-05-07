@@ -1,0 +1,16 @@
+0:0:0:0:0:0:0:1 - - [15/Aug/2017:21:58:02 +0800] "GET /mvc/user/list HTTP/1.1" 404 949 http-bio-8080-exec-1 81
+0:0:0:0:0:0:0:1 - - [15/Aug/2017:21:58:03 +0800] "GET /favicon.ico HTTP/1.1" 404 - http-bio-8080-exec-2 0
+0:0:0:0:0:0:0:1 - - [15/Aug/2017:21:58:09 +0800] "GET /user/list HTTP/1.1" 404 - http-bio-8080-exec-3 0
+0:0:0:0:0:0:0:1 - - [15/Aug/2017:21:58:09 +0800] "GET /favicon.ico HTTP/1.1" 404 - http-bio-8080-exec-4 0
+0:0:0:0:0:0:0:1 - - [15/Aug/2017:21:58:10 +0800] "GET /user/list HTTP/1.1" 404 - http-bio-8080-exec-6 0
+0:0:0:0:0:0:0:1 - - [15/Aug/2017:21:58:13 +0800] "GET /user/list HTTP/1.1" 404 - http-bio-8080-exec-7 0
+0:0:0:0:0:0:0:1 - - [15/Aug/2017:21:58:24 +0800] "GET /mvc/user/list HTTP/1.1" 404 949 http-bio-8080-exec-5 4
+0:0:0:0:0:0:0:1 - - [15/Aug/2017:21:58:24 +0800] "GET /favicon.ico HTTP/1.1" 404 - http-bio-8080-exec-9 0
+0:0:0:0:0:0:0:1 - - [15/Aug/2017:22:00:22 +0800] "GET /mvc/user/list HTTP/1.1" 404 949 http-bio-8080-exec-1 4
+0:0:0:0:0:0:0:1 - - [15/Aug/2017:22:00:22 +0800] "GET /favicon.ico HTTP/1.1" 404 - http-bio-8080-exec-1 0
+0:0:0:0:0:0:0:1 - - [15/Aug/2017:22:00:23 +0800] "GET /mvc/user/list HTTP/1.1" 404 949 http-bio-8080-exec-1 2
+0:0:0:0:0:0:0:1 - - [15/Aug/2017:22:00:24 +0800] "GET /favicon.ico HTTP/1.1" 404 - http-bio-8080-exec-1 0
+0:0:0:0:0:0:0:1 - - [15/Aug/2017:22:00:26 +0800] "GET /mvc/user/list HTTP/1.1" 404 949 http-bio-8080-exec-1 4
+0:0:0:0:0:0:0:1 - - [15/Aug/2017:22:00:26 +0800] "GET /favicon.ico HTTP/1.1" 404 - http-bio-8080-exec-1 0
+0:0:0:0:0:0:0:1 - - [15/Aug/2017:22:11:58 +0800] "GET /mvc/user/list HTTP/1.1" 500 4824 http-bio-8080-exec-1 115
+0:0:0:0:0:0:0:1 - - [15/Aug/2017:22:11:59 +0800] "GET /favicon.ico HTTP/1.1" 404 - http-bio-8080-exec-2 0

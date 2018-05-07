@@ -1,0 +1,4 @@
+0:0:0:0:0:0:0:1 - - [25/Mar/2018:00:52:02 +0800] "GET /user/getUser?id=1 HTTP/1.1" 500 20251 http-bio-8899-exec-2 2316
+0:0:0:0:0:0:0:1 - - [25/Mar/2018:00:52:17 +0800] "GET /user/getUser?id=1 HTTP/1.1" 500 20251 http-bio-8899-exec-4 2014
+0:0:0:0:0:0:0:1 - - [25/Mar/2018:00:57:38 +0800] "GET /user/getUser?id=1 HTTP/1.1" 500 20251 http-bio-8899-exec-2 2209
+0:0:0:0:0:0:0:1 - - [25/Mar/2018:00:59:03 +0800] "GET /user/manager HTTP/1.1" 200 291 http-bio-8899-exec-3 1386
