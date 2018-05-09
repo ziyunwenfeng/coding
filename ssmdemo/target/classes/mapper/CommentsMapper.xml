@@ -187,12 +187,52 @@
     </set>
     where COMMENTS_ID = #{commentsId,jdbcType=DECIMAL}
   </update>
+  -->
   <update id="updateByPrimaryKey" parameterType="entity.Comments">
     update COMMENTS
-    set AUTHOR = #{author,jdbcType=DECIMAL},
-      ARTICLE = #{article,jdbcType=DECIMAL},
+    set AUTHOR = #{author.authorId},
+      ARTICLE = #{article.articleId},
       COMMENTS = #{comments,jdbcType=VARCHAR}
-    where COMMENTS_ID = #{commentsId,jdbcType=DECIMAL}
+    where COMMENTS_ID = #{commentsId}
   </update>
-  -->
+    <insert id="insert" parameterType="entity.Comments">
+    insert into COMMENTS (COMMENTS_ID, AUTHOR, ARTICLE, 
+      COMMENTS)
+    values (#{commentsId}, #{author.authorId}, #{article.articleId}, 
+      #{comments,jdbcType=VARCHAR})
+  </insert>
+  <sql id="Base_Column_List">
+    COMMENTS_ID, AUTHOR, ARTICLE, COMMENTS
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select 
+    <!--  
+    <include refid="Base_Column_List" />
+    -->
+    *
+    from COMMENTS,AUTHOR,ARTICLE
+    where COMMENTS.author=AUTHOR.author_Id AND ARTICLE.article_Id = COMMENTS.article and COMMENTS_ID = #{commentsId}
+  </select>
+   
+  <resultMap id="BaseResultMap" type="entity.Comments">
+    <id column="COMMENTS_ID"  property="commentsId" />
+<!--  
+    <result column="AUTHOR"  property="author" />
+    <result column="ARTICLE"  property="article" /> 
+    -->
+    <result column="COMMENTS" property="comments" />
+    <association property="author" column="author_id"
+			javaType="entity.Author">
+			<id property="authorId" column="author_id" />
+			<result property="username" column="username" />
+			<result property="nickname" column="nickname" />
+			<result property="birthday" column="birthday" />
+			<result property="registerTime" column="register_time" />
+		</association>
+	<association property="article" column="article_id"
+			javaType="entity.Article">
+			<id property="articleId" column="article_id" />
+		</association>
+  </resultMap>
+ 
 </mapper>

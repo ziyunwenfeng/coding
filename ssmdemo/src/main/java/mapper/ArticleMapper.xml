@@ -179,6 +179,12 @@
 		#{text},#{author})
 	</insert>
 	-->
+	<update id="updateByPrimaryKey" parameterType="entity.Article"> 
+		update ARTICLE
+		set TITLE = #{title,jdbcType=VARCHAR},
+		TEXT = #{text,jdbcType=VARCHAR}, AUTHOR = #{author.authorId} where
+		ARTICLE_ID = #{articleId}
+	</update>
 	<delete id="deleteByPrimaryKey" parameterType="java.lang.Long"> delete from
 		ARTICLE
 		where ARTICLE_ID = #{articleId,jdbcType=DECIMAL}
@@ -214,14 +220,22 @@
 		column="register_time" /> </association> </resultMap> -->
 	<select id="selectArticleWithCommentsByArticle" parameterType="java.lang.Long"
 		resultMap="articleCommentsMap">
-		select * from article ,comments where
-		article.article_id=comments.article and
+		select * from article ,comments,author 
+		where
+		article.article_id=comments.article and article.author = author.author_id and
 		article.article_id=#{articleId}
 	</select>
 	<resultMap type="entity.Article" id="articleCommentsMap">
 		<id property="articleId" column="article_id" />
 		<result property="title" column="title" />
 		<result property="text" column="text" />
+		<association property="author" javaType="entity.Author">
+			<id property="authorId" column="author_id" />
+			<result property="username" column="username" />
+			<result property="nickname" column="nickname" />
+			<result property="birthday" column="birthday" />
+			<result property="registerTime" column="register_time" />
+		</association>
 		<collection property="comments" ofType="entity.Comments">
 			<id property="commentsId" column="comments_id" />
 			<result property="comments" column="comments" />

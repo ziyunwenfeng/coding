@@ -15,6 +15,7 @@ import entity.Author;
 import entity.Comments;
 import entity.Stu;
 import service.AuthorService;
+import service.CommentsService;
 import service.IArticleService;
 import service.IStuService;
 @Controller
@@ -26,6 +27,8 @@ public class MainController {
 	private IArticleService articleService;
 	@Autowired
 	private AuthorService authorService;
+	@Autowired
+	private CommentsService commentsService;
 	@RequestMapping(value = "/users",method = RequestMethod.GET)
 	@ResponseBody
 	public List<Stu> getUsers(){
@@ -72,11 +75,17 @@ public class MainController {
 	public Article getArticleComments(@RequestParam("articleId") Long articleId){
 		return articleService.selectArticleWithCommentsByArticle(articleId);
 	}
+	@RequestMapping(value = "/updateArticleComments",method = RequestMethod.POST)
+	@ResponseBody
+	public void updateArticleComments(@RequestBody Article article){
+		articleService.updateArticle(article);
+	}
 	@RequestMapping(value = "/selectArticleByComments",method = RequestMethod.GET)
 	@ResponseBody
 	public Comments getArticleByComments(@RequestParam("commentsId") Long commentsId){
 		return articleService.selectArticleByComments(commentsId);
 	}
+	
 	@RequestMapping(value = "/insertArticle",method = RequestMethod.POST)
 	@ResponseBody
 	public void insertArticle(@RequestBody Article article){
@@ -96,5 +105,15 @@ public class MainController {
 	@ResponseBody
 	public void deleteAuthor(@RequestParam("authorId") Long authorId){
 		authorService.deleteAuthor(authorId);
+	}
+	@RequestMapping(value = "/selectComments",method = RequestMethod.GET)
+	@ResponseBody
+	public Comments getComments(@RequestParam("commentsId") Long commentsId){
+		return commentsService.getComments(commentsId);
+	}
+	@RequestMapping(value = "/updateComments",method = RequestMethod.POST)
+	@ResponseBody
+	public void updateComments(@RequestBody Comments comments){
+		 commentsService.updateComments(comments);
 	}
 }

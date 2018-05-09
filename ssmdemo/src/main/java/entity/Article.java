@@ -18,14 +18,14 @@ public class Article implements Serializable{
 //    private Long author;
     private Author author;
     
-//    private List<Comments> comments;
-//    
-//    public List<Comments> getComments() {
-//		return comments;
-//	}
-//	public void setComments(List<Comments> comments) {
-//		this.comments = comments;
-//	}
+    private List<Comments> comments;
+    
+    public List<Comments> getComments() {
+		return comments;
+	}
+	public void setComments(List<Comments> comments) {
+		this.comments = comments;
+	}
 	public Article(){}
     public Article(Long articleId,String title,String text,Author author){
     	this.articleId = articleId;
