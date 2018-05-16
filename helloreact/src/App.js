@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import fetch from 'isomorphic-fetch'
+import ListStore from './store/ListStore'
 import './App.css';
 
 // import CommentList from './CommentList'
@@ -11,6 +12,7 @@ import ButtonActions from './actions/ButtonActions';
 class App extends Component {
   constructor(){
     super()
+    items : []
     this.state = {
       comment : []
     }
@@ -19,7 +21,9 @@ class App extends Component {
     // ajax.get('http://localhost:8899/user/users',(userData)=>{
       
     // })
+    
   }
+
   handle(e) {
     console.log(e.target.innerHTML)
     console.log(this)
@@ -30,6 +34,7 @@ class App extends Component {
     // console.log("``````saveAjax2``````````")
     // this.getAjax2()
     // this.saveAjax()
+    ListStore.addChangeListener(this._onChange);
   }
   render() {
     const word = false;
@@ -59,8 +64,14 @@ class App extends Component {
     );
     
   }
+  _onChange () {
+    // this.setState({
+    //   comment: ListStore.getAll()
+    // });
+    console.log("-----",ListStore.getAll())
+  }
   fluxTest(){
-    let data = ButtonActions.fluxDemo()
+    let data = ButtonActions.addNewItem()
     console.log("-----",data)
   }
   handleSubmit(data){
