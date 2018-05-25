@@ -2,10 +2,41 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.example.datadictionary.UserMapper">
 	<resultMap type="entity.User" id="userMap">
-		<id column="uid" property="uid"/>
-		<result column="name" property="name"/>
+		<id column="userid" property="uid"/>
+		<result column="username" property="name"/>
 	</resultMap>
 	<select id="getAllUser" resultMap="userMap">
-		select * from user;
+		select * from t_user
+	</select>
+	<select id="getAllUser2" statementType="CALLABLE" resultMap="userMap" parameterType="java.util.Map">
+		{call getAllUser(#{result, mode = OUT,jdbcType=CURSOR,javaType=java.sql.ResultSet,resultMap=userMap})}
+	</select>	
+	<select id="getUserByPage" resultMap="userMap" parameterType="java.util.Map">
+	 	<![CDATA[select * from (select t.*,rownum rn from t_user t where rownum<=#{low}) where rn>=#{high}]]>
+	
+		
+	</select>
+	<sql id="sf">
+		select * from t_user 
+	</sql>
+	<delete id="deleteUser" parameterType="java.lang.Integer">
+		delete from t_user where t_user.userid = #{userId}
+	</delete>
+	<insert id="saveUser" parameterType="entity.User">
+		{call insertOneUser(#{uid},#{name})}
+	</insert>
+	<insert id = "insertUser" parameterType="entity.User">
+		<selectKey keyProperty="uid" order="AFTER" resultType="java.lang.Integer">
+		select LAST_INSERT_ID() from dual
+		</selectKey>
+		insert into t_user(userid,username) values (#{uid},#{name})
+	</insert>
+	
+	<select id="getByList" parameterType="java.util.List" resultMap="userMap">
+		<include refid="sf"/> where userid in
+		<foreach collection = "list" index = "index" item="item" open="(" separator="," close=")">
+				#{item} 
+		</foreach>
+		
 	</select>
 </mapper>
