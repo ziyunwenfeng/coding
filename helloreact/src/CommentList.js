@@ -9,11 +9,11 @@ class CommentList extends Component {
     componentDidMount() {
     }
     render() {
-        // const comments = [
-        //     { userName: "tang", content: 12 },
-        //     { userName: "yuy", content: 15 },
-        //     { userName: "zoin", content: 18 }
-        // ]
+        const comments = [
+            { userName: "tang", content: 12 },
+            { userName: "yuy", content: 15 },
+            { userName: "zoin", content: 18 }
+        ]
         return (
             <div>
                 {

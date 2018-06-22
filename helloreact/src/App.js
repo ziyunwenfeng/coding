@@ -33,7 +33,7 @@ class App extends Component {
     // this.getAjax()
     // console.log("``````saveAjax2``````````")
     // this.getAjax2()
-    // this.saveAjax()
+    this.saveAjax2()
     ListStore.addChangeListener(this._onChange);
   }
   render() {
@@ -154,11 +154,33 @@ class App extends Component {
     fetch('http://localhost:8899/user/saveU',{
       method : 'POST',
       headers : myHeaders,
-      // body : formData
+     
       body : JSON.stringify({
         id : '1',
         name : 'tangwenfeng',
         pwd : 'pwd'
+      })
+    }).then((res)=>{
+      console.log("ddddddd",res)
+      if(res.ok){
+        // res.json();
+      }
+      // return res.json()
+    })
+  }
+  saveAjax2(){
+    let myHeaders = new Headers({
+      'Access-Control-Allow-Origin': '*',
+      'Content-Type': 'application/json',
+      'Authorization' :'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1Mjc2NjA4NTc0MTIsInBheWxvYWQiOiJ7XCJuYW1lXCI6XCJ0YW5nd2VuZmVuZ1wiLFwiYWdlXCI6MTV9In0.kwgU50_9nKQFaKEbi5niu2esWVAp7Q0aDSl5kADKEjk'
+  });
+    fetch('http://localhost:8080/user/jwtTest',{
+      method : 'POST',
+      headers : myHeaders,
+      mode : 'cors',
+      body : JSON.stringify({        
+        name : 'tangwenfeng',
+        age : 15
       })
     }).then((res)=>{
       console.log("ddddddd",res)

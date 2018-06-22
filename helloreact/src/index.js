@@ -11,8 +11,10 @@ import {BrowserRouter,HashRouter,Route } from 'react-router-dom'
 ReactDOM.render(
     <HashRouter>
         <div>
-        <Route path="/" component = {User}/>
-        <Route path="/article" component = {Article}/>
+        <Route path="/" component = {App}/>     
+        {/* <Route path="/" component = {User}/>
+
+        <Route path="/article" component = {Article}/> */}
         </div>
     </HashRouter>,
     document.getElementById('root'));
