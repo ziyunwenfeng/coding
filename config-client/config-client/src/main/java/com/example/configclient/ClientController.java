@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RefreshScope
 @RestController
 public class ClientController {
-//	@Value("${from}")
+	@Value("${from}")
 	String from;
 	@RequestMapping("/from")
 	public String from(){

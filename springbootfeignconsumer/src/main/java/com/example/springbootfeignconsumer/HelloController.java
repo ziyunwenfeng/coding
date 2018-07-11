@@ -1,6 +1,8 @@
 package com.example.springbootfeignconsumer;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpRequest;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -8,6 +10,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
+
+@CrossOrigin(origins = "*")
 @RestController
 
 public class HelloController {
@@ -52,6 +56,14 @@ public class HelloController {
 				str+refactorHelloService.hello("cloud")+"*****"
 				+refactorHelloService.hello("Uber",12).getName()+"*****"
 				+refactorHelloService.hello(new com.example.helloserviceapi.User("Didid",16));
+	}
+	
+	@RequestMapping(value = "/jwtTest",method = RequestMethod.POST)
+	@ResponseBody
+	public void jwtTest(HttpRequest request) {
+		System.out.println("header");
+		System.out.println(request.getHeaders());
+		
 	}
 	
 	
