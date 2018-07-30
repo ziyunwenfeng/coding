@@ -5,8 +5,15 @@
 	<meta charset="UTF-8" />
 </head>
 
+<script type="text/javascript">
+	function getBooks(){
+		alert("click");
+		return "books";	
+	}
+</script>
+
 <body>
-	<form action="../java/controller/Login" method="post">
+	<form action="loginServlet" method="post">
 		<div>
 			<label for="user">
 			用户名：
@@ -24,6 +31,9 @@
 	</form>
 
 	<!-- <script src="./src/index.js"></script> -->
+	
+		<button onClick="getBooks()">books</button>
+	
 </body>
 
 </html>

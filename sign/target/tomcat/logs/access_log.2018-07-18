@@ -1,0 +1,14 @@
+0:0:0:0:0:0:0:1 - - [18/Jul/2018:11:00:27 +0800] "GET /sign/ HTTP/1.1" 200 486 http-bio-8080-exec-1 80
+0:0:0:0:0:0:0:1 - - [18/Jul/2018:11:00:30 +0800] "POST /sign/loginServlet HTTP/1.1" 302 - http-bio-8080-exec-2 6
+0:0:0:0:0:0:0:1 - - [18/Jul/2018:11:00:30 +0800] "GET /sign/fail.html HTTP/1.1" 200 124 http-bio-8080-exec-3 4
+0:0:0:0:0:0:0:1 - - [18/Jul/2018:11:05:02 +0800] "POST /sign/loginServlet HTTP/1.1" 302 - http-bio-8080-exec-1 31
+0:0:0:0:0:0:0:1 - - [18/Jul/2018:11:05:02 +0800] "GET /sign/fail.html HTTP/1.1" 304 - http-bio-8080-exec-2 8
+0:0:0:0:0:0:0:1 - - [18/Jul/2018:17:57:49 +0800] "GET / HTTP/1.1" 404 - http-bio-8080-exec-1 0
+0:0:0:0:0:0:0:1 - - [18/Jul/2018:17:58:00 +0800] "GET /sign HTTP/1.1" 302 - http-bio-8080-exec-2 0
+0:0:0:0:0:0:0:1 - - [18/Jul/2018:17:58:00 +0800] "GET /sign/ HTTP/1.1" 304 - http-bio-8080-exec-3 24
+0:0:0:0:0:0:0:1 - - [18/Jul/2018:17:58:16 +0800] "POST /sign/loginServlet HTTP/1.1" 302 - http-bio-8080-exec-4 14
+0:0:0:0:0:0:0:1 - - [18/Jul/2018:17:58:16 +0800] "GET /sign/IndexServlet HTTP/1.1" 200 52 http-bio-8080-exec-5 9
+0:0:0:0:0:0:0:1 - - [18/Jul/2018:18:04:13 +0800] "POST /sign/loginServlet HTTP/1.1" 302 - http-bio-8080-exec-7 2
+0:0:0:0:0:0:0:1 - - [18/Jul/2018:18:04:13 +0800] "GET /sign/fail.html HTTP/1.1" 304 - http-bio-8080-exec-8 7
+0:0:0:0:0:0:0:1 - - [18/Jul/2018:18:04:17 +0800] "POST /sign/loginServlet HTTP/1.1" 302 - http-bio-8080-exec-9 2
+0:0:0:0:0:0:0:1 - - [18/Jul/2018:18:04:17 +0800] "GET /sign/fail.html HTTP/1.1" 304 - http-bio-8080-exec-10 0

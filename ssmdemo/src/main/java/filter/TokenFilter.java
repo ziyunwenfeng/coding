@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import entity.Stu;
 import utils.JWTUtil;
-@WebFilter(urlPatterns="/user/*")
+//@WebFilter(urlPatterns="/user/*")
 public class TokenFilter implements Filter{
 
 	@Override

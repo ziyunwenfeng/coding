@@ -29,9 +29,9 @@ import service.IArticleService;
 import service.IStuService;
 import utils.JWTUtil;
 import utils.ResponseData;
-@CrossOrigin("http://localhost:3000")
-@Controller
-@RequestMapping("/user")
+//@CrossOrigin("http://localhost:3000")
+//@Controller
+//@RequestMapping("/user")
 public class MainController {
 	@Autowired
 	private IStuService service;
@@ -158,6 +158,7 @@ public class MainController {
 	@RequestMapping(value = "/jwt",method = RequestMethod.POST)
 	@ResponseBody
 	public void jwt(@RequestBody Stu stu){
+		
 		String token = JWTUtil.encode(stu, 10000);
 		System.out.println("token");
 		System.out.println(token);

@@ -1,0 +1,3 @@
+0:0:0:0:0:0:0:1 - - [20/Jul/2018:08:59:17 +0800] "GET /sign/ HTTP/1.1" 200 486 http-bio-8080-exec-2 45
+0:0:0:0:0:0:0:1 - - [20/Jul/2018:08:59:18 +0800] "GET /favicon.ico HTTP/1.1" 404 - http-bio-8080-exec-3 0
+0:0:0:0:0:0:0:1 - - [20/Jul/2018:08:59:27 +0800] "POST /sign/LoginServlet HTTP/1.1" 404 985 http-bio-8080-exec-4 5
