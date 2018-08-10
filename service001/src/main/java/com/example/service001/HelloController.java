@@ -19,6 +19,12 @@ public class HelloController {
 	public String index(){
 		ServiceInstance instance = discoveryClient.getLocalServiceInstance();
 		System.out.println(instance.getHost()+" "+instance.getServiceId());
+//		try {
+//			Thread.sleep(5000);
+//		} catch (InterruptedException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
 		return "service0001";
 	}
 	@RequestMapping(value="/hello1",method=RequestMethod.GET)
