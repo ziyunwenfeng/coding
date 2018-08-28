@@ -5,4 +5,7 @@
     <select id="allBooks" resultType="com.example.service001.entity.Book">
         select id,name from Book
     </select>
+    <select id="getBookById" resultType="com.example.service001.entity.Book">
+    	select id,name from Book where id=#{id}
+    </select>
 </mapper>

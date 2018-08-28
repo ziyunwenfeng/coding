@@ -18,4 +18,7 @@ public class BookService {
 	public List<Book> allBooks(){
 		return dao.allBooks();
 	}
+	public Book getBookById(int id) {
+		return dao.getBookById(id);
+	}
 }

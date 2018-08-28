@@ -11,4 +11,5 @@ import com.example.service001.entity.Book;
 @Mapper
 public interface BookMapper {
 	public List<Book> allBooks();
+	public Book getBookById(int id);
 }
