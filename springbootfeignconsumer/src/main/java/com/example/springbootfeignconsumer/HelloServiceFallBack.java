@@ -11,46 +11,46 @@ public class HelloServiceFallBack implements HelloService {
 		return "error";
 	}
 
-//	@Override
-//	public String hello() {
-//		// TODO Auto-generated method stub
-//		return null;
-//	}
-//
-//	@Override
-//	public String hello1(@RequestParam("name") String name) {
-//		// TODO Auto-generated method stub
-//		return null;
-//	}
-//
-//	@Override
-//	public User hello2(@RequestParam("name") String name, @RequestParam("age") int age) {
-//		// TODO Auto-generated method stub
-//		return null;
-//	}
-//
-//	@Override
-//	public String hello3(@RequestBody User user) {
-//		// TODO Auto-generated method stub
-//		return null;
-//	}
-//
-//	@Override
-//	public String hello4(@RequestParam("name")  String name) {
-//		// TODO Auto-generated method stub
-//		return null;
-//	}
-//
-//	@Override
-//	public User hello5(@RequestParam("name") String name) {
-//		// TODO Auto-generated method stub
-//		return null;
-//	}
-//
-//	@Override
-//	public User hello6(@RequestBody User user) {
-//		// TODO Auto-generated method stub
-//		return null;
-//	}
+	@Override
+	public String hello() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String hello1(@RequestParam("name") String name) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public User hello2(@RequestParam("name") String name, @RequestParam("age") int age) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String hello3(@RequestBody User user) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String hello4(@RequestParam("name")  String name) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public User hello5(@RequestParam("name") String name) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public User hello6(@RequestBody User user) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 
 }

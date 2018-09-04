@@ -17,8 +17,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class HelloController {
 	@Autowired
 	HelloService helloService;
-	@Autowired
-	RefactorHelloService refactorHelloService ;
+//	@Autowired
+//	RefactorHelloService refactorHelloService ;
 	
 	@RequestMapping(value="/feign",method=RequestMethod.GET)
 	public String helloFeign() {
@@ -54,14 +54,14 @@ public class HelloController {
 //				+helloService.hello2("userTang",12).getName()+"*******"
 //				+helloService.hello3(new User("userWu",16));
 //	}
-	@RequestMapping(value="/feign-consumer3",method=RequestMethod.GET)
-	public String hellocontroller3(){
-		String str = "";
-		return 
-				str+refactorHelloService.hello("cloud")+"*****"
-				+refactorHelloService.hello("Uber",12).getName()+"*****"
-				+refactorHelloService.hello(new com.example.helloserviceapi.User("Didid",16));
-	}
+//	@RequestMapping(value="/feign-consumer3",method=RequestMethod.GET)
+//	public String hellocontroller3(){
+//		String str = "";
+//		return 
+//				str+refactorHelloService.hello("cloud")+"*****"
+//				+refactorHelloService.hello("Uber",12).getName()+"*****"
+//				+refactorHelloService.hello(new com.example.helloserviceapi.User("Didid",16));
+//	}
 	
 	@RequestMapping(value = "/jwtTest",method = RequestMethod.POST)
 	@ResponseBody

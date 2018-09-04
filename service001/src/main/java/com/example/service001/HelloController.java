@@ -29,6 +29,7 @@ public class HelloController {
 	}
 	@RequestMapping(value="/hello1",method=RequestMethod.GET)
 	String hello1(@RequestParam("name") String name){
+		System.out.println("hello1------------------");
 		return "service0001: "+name;
 	}
 	@RequestMapping(value="/hello2",method=RequestMethod.GET)
@@ -54,5 +55,6 @@ public class HelloController {
 		System.out.println("-------"+user.getName()+"----"+user.getAge());
 		return new User("wenfeng",24);
 	}
+	
 	
 }

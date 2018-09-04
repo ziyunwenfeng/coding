@@ -56,6 +56,7 @@
 			<artifactId>hello-service-api</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
+		<!--  
 		<dependency>
             <groupId>org.aspectj</groupId>
             <artifactId>aspectjrt</artifactId>
@@ -72,6 +73,7 @@
             <groupId>org.springframework</groupId>
             <artifactId>spring-aspects</artifactId>
         </dependency>
+        -->
 	</dependencies>
 
 	<dependencyManagement>
