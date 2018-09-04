@@ -13,8 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 public interface HelloService {
 	@RequestMapping(value="/hello",method=RequestMethod.GET)
 	String index();
-	@RequestMapping(value="/hello")
-	String hello();
+	
 	@RequestMapping(value="/hello1",method=RequestMethod.GET)
 	String hello1(@RequestParam("name") String name);
 	@RequestMapping(value="/hello2",method=RequestMethod.GET)

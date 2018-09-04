@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class FeignController {
 	@Autowired
 	FeignInterface feign;
+	@Autowired
+	RefactorService refactorService;
 	@RequestMapping(value="/hello",method=RequestMethod.GET)
 	String getService() {
 		return feign.getService();
@@ -23,4 +25,18 @@ public class FeignController {
 	public String insert(@RequestBody User u) {
 		return feign.insert(u);
 	}
+	//继承serviceapi
+	@RequestMapping(value="/refactor1",method=RequestMethod.GET)
+	public String refactor(@RequestParam("name") String name) {
+		return refactorService.hello(name);
+	}
+	@RequestMapping(value="/refactor2",method=RequestMethod.POST)
+	public String refactor2(@RequestBody com.example.helloserviceapi.User u) {
+		return refactorService.hello2(u);
+	}
+	@RequestMapping(value="/refactor3",method=RequestMethod.GET)
+	public com.example.helloserviceapi.User refactor3(@RequestParam("name") String name,@RequestParam("age") int age) {
+		return refactorService.setUser(name,age);
+	}
+	
 }

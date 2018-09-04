@@ -41,8 +41,9 @@ public class HelloController {
 		return user.getName();
 	}
 	@RequestMapping(value="/hello4",method=RequestMethod.GET)
-	void hello4(@RequestParam("name") String name){
+	String hello4(@RequestParam("name") String name){
 		System.out.println("-----------------"+name);
+		return "service0001: "+name; 
 	}
 	@RequestMapping(value="/hello5",method=RequestMethod.GET)
 	User hello5(@RequestParam("name") String name){

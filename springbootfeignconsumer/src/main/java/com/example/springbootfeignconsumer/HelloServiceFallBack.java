@@ -11,11 +11,7 @@ public class HelloServiceFallBack implements HelloService {
 		return "error";
 	}
 
-	@Override
-	public String hello() {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	
 
 	@Override
 	public String hello1(@RequestParam("name") String name) {
