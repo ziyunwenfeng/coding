@@ -13,12 +13,18 @@ public class AccessFilter extends ZuulFilter {
 		RequestContext requestContext = RequestContext.getCurrentContext();
 		HttpServletRequest request = requestContext.getRequest();
 		
-		Object accessToken = request.getParameter("accessToken");
-		if(accessToken==null){
-			requestContext.setSendZuulResponse(false);
-			requestContext.setResponseStatusCode(401);
-			return null;
-		}
+//		Object accessToken = request.getParameter("accessToken");
+//		if(accessToken==null){
+//			requestContext.setSendZuulResponse(false);
+//			requestContext.setResponseStatusCode(401);
+//			return null;
+//		}
+//		return null;
+		String username = (String)request.getSession().getAttribute("username");
+		username = "wenfeng";
+		requestContext.addZuulRequestHeader("username", "sessionId="+username);
+		requestContext.setSendZuulResponse(true);
+		requestContext.setResponseStatusCode(200);
 		return null;
 	}
 

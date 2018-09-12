@@ -14,6 +14,7 @@ public class FeignController {
 	RefactorService refactorService;
 	@RequestMapping(value="/hello",method=RequestMethod.GET)
 	String getService() {
+		System.out.println("feign-hello");
 		return feign.getService();
 	}
 	@RequestMapping(value="/hello1",method=RequestMethod.GET)

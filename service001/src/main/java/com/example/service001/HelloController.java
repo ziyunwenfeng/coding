@@ -1,5 +1,8 @@
 package com.example.service001;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
@@ -17,6 +20,7 @@ public class HelloController {
 	private DiscoveryClient discoveryClient;
 	@RequestMapping(value="/hello",method=RequestMethod.GET)
 	public String index(){
+		System.out.println("service001-hello");
 		ServiceInstance instance = discoveryClient.getLocalServiceInstance();
 		System.out.println(instance.getHost()+" "+instance.getServiceId());
 //		try {
@@ -57,5 +61,19 @@ public class HelloController {
 		return new User("wenfeng",24);
 	}
 	
+	@RequestMapping(value="/getSessionId",method=RequestMethod.GET)
+	public String getSessionId(HttpServletRequest request) {
+		HttpSession session = request.getSession();
+		String username = request.getHeader("username");
+//		String username = (String)session.getAttribute("username");
+		if(username==null) {
+			System.out.println("username null");
+			username = "null";
+		}else {
+			System.out.println("username not null"+username);
+			
+		}
+		return username;
+	}
 	
 }
